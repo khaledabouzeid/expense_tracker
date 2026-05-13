@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Total
+{% endblock %}
+    
+{% block body %}
+
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>category</th>
+            <th>amount</th>
+            <th>currency</th>
+            <th>amount in usd</th>
+            <th>date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for tot in total %}
+        <tr>
+            <td>{{ tot [0] }}</td>
+            <td>{{ tot [1] }}</td>
+            <td>{{ tot [2] }}</td>
+            <td>{{ tot [3] }}</td>
+            <td>{{ tot [4] }}</td>
+            <td>{{ tot [5] }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+    
+
+</table>
+{% endblock %}
