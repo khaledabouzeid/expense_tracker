@@ -6,17 +6,6 @@ Total
     
 {% block body %}
 
-
-
-
-<select name="date" onchange="window.location='/day/'+this.value">
-    {% for d in total_dates %}
-        <option value="{{d[0]}}">{{d[0]}}</option>
-    {% endfor %}
-</select>
-
-
-
 <table>
     <thead>
         <tr>
