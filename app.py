@@ -65,8 +65,9 @@ def total_usd():
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
     total= cursor.execute("SELECT sum(amount_in_base) FROM expenses").fetchone()
+    total_dates_usd = cursor.execute("SELECT DISTINCT date FROM expenses;").fetchall()
     conn.close()
-    return render_template("total_usd.html", total_usd=total)
+    return render_template("total_usd.html", total_usd=total, total_dates_usd =total_dates_usd)
 
 @app.route("/total")
 def total():
@@ -87,3 +88,6 @@ def expense_day(date):
 
     conn.close()
     return render_template("day.html", date = date0)
+
+
+

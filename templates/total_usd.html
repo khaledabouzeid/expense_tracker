@@ -8,5 +8,15 @@ Total in USD
 <div class="total-usd">
     <h4>{{total_usd[0]}}</h4>
 </div>
+<h3>Select Date</h3>
+<select name="date" onchange="window.location='/day/'+this.value">
+    <h3>Select Date</h3>
+    {% for date in  total_dates_usd %}
+        <option value="{{date[0]}}">{{date[0]}}</option>
+    {% endfor %}
+</select>
+
+
+
 
 {% endblock %}

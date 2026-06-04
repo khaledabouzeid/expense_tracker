@@ -8,13 +8,16 @@ Total
 
 
 
-
+<h3>Select Date</h3>
 <select name="date" onchange="window.location='/day/'+this.value">
+    
     {% for d in total_dates %}
         <option value="{{d[0]}}">{{d[0]}}</option>
     {% endfor %}
 </select>
-
+<br>
+<hr>
+<br>
 
 
 <table>
@@ -29,14 +32,14 @@ Total
         </tr>
     </thead>
     <tbody>
-        {% for d in date %}
+        {% for t in total %}
         <tr>
-            <td>{{ d [0] }}</td>
-            <td>{{ d [1] }}</td>
-            <td>{{ d [2] }}</td>
-            <td>{{ d [3] }}</td>
-            <td>{{ d [4] }}</td>
-            <td>{{ d [5] }}</td>
+            <td>{{ t [0] }}</td>
+            <td>{{ t [1] }}</td>
+            <td>{{ t [2] }}</td>
+            <td>{{ t [3] }}</td>
+            <td>{{ t [4] }}</td>
+            <td>{{ t [5] }}</td>
         </tr>
 
         {% endfor %}
